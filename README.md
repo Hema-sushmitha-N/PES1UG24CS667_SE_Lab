@@ -11,3 +11,9 @@ Agile Backlog Creation & Sprint Simulation in Jira.
 
 **Lab 2 Deliverable:** `Lab-2/Lab_2_Jira_Agile_Backlog_Sprint.pdf`
 
+## Lab 3
+
+Component Modelling & Architectural Pattern Selection.
+
+- Component Diagram: `Lab-3/Lab_3_Component_Diagram.pdf`
+- Architecture Justification: `Lab-3/Lab_3_Architecture_Justification.pdf`
