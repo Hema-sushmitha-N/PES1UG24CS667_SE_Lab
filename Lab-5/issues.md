@@ -45,6 +45,6 @@ Line numbers refer to the **original** file, before the fixes.
 
 ## Reports included in this repository
 
-- `pylint_report_before.txt`, `pylint_report_after.txt`
-- `bandit_report_before.txt`, `bandit_report_after.txt`
-- `flake8_report_before.txt`, `flake8_report_after.txt`
+- `reports/pylint_report_before.txt`, `reports/pylint_report_after.txt`
+- `reports/bandit_report_before.txt`, `reports/bandit_report_after.txt`
+- `reports/flake8_report_before.txt`, `reports/flake8_report_after.txt`
