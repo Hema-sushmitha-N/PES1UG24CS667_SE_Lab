@@ -17,3 +17,12 @@ Component Modelling & Architectural Pattern Selection.
 
 - Component Diagram: `Lab-3/Lab_3_Component_Diagram.pdf`
 - Architecture Justification: `Lab-3/Lab_3_Architecture_Justification.pdf`
+
+  ## Lab 5
+Static Code Analysis using Pylint, Bandit and Flake8 on `energy_system.py` (Energy Consumption & Tariff Calculator).
+
+- Cleaned code: [Lab-5/energy_system.py](Lab-5/energy_system.py)
+- Issues table: [Lab-5/issues.md](Lab-5/issues.md)
+- Reflection: [Lab-5/reflection.md](Lab-5/reflection.md)
+- Reports (before and after): `Lab-5/pylint_report_*.txt`, `Lab-5/bandit_report_*.txt`, `Lab-5/flake8_report_*.txt`
+- Results: Pylint 6.14 → 10.00/10, Bandit 1 issue → 0, Flake8 12 warnings → 0
