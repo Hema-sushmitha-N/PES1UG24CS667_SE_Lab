@@ -32,6 +32,7 @@ Static Code Analysis using Pylint, Bandit and Flake8 on `energy_system.py` (Ener
 Code and Branch Coverage Analysis on the unchanged coffee shop application.
 
 - [Lab 6 files and instructions](Lab-6/README.md)
+- [Lab 6 PDF report: summary and screenshots](Lab-6/Lab_6_Code_and_Branch_Coverage_Report.pdf)
 - [Line coverage tests](Lab-6/CodeCoverageTest_coffee_shop_order.py): 100% statement coverage
 - [Branch coverage tests](Lab-6/BranchCoverageTest_coffee_shop_order.py): 100% statement and branch coverage
 - [Result screenshots and reports](Lab-6/reports/)

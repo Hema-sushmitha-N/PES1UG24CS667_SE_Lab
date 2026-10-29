@@ -20,6 +20,7 @@ statement and branch coverage; its initial 43% is not the branch-only percentage
 
 ## Deliverables
 
+- [Consolidated PDF report: summary and both screenshots](Lab_6_Code_and_Branch_Coverage_Report.pdf)
 - [Code coverage tests](CodeCoverageTest_coffee_shop_order.py)
 - [Branch coverage tests](BranchCoverageTest_coffee_shop_order.py)
 - [Code coverage screenshot](reports/line/terminal_screenshot.png)
