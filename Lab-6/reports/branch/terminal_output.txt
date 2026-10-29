@@ -1,0 +1,68 @@
+Coffee shop lab: branch
+Working directory: C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage run --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\.coverage --source=coffee_shop_order --branch -m pytest BranchCoverageTest_coffee_shop_order.py -v --color=no
+============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6
+configfile: pytest.ini
+collecting ... collected 39 items
+
+BranchCoverageTest_coffee_shop_order.py::test_invalid_input[None-0] PASSED [  2%]
+BranchCoverageTest_coffee_shop_order.py::test_invalid_input[orders1-0] PASSED [  5%]
+BranchCoverageTest_coffee_shop_order.py::test_invalid_input[orders2-0] PASSED [  7%]
+BranchCoverageTest_coffee_shop_order.py::test_invalid_input[orders3--0.01] PASSED [ 10%]
+BranchCoverageTest_coffee_shop_order.py::test_no_sale[orders0] PASSED    [ 12%]
+BranchCoverageTest_coffee_shop_order.py::test_no_sale[orders1] PASSED    [ 15%]
+BranchCoverageTest_coffee_shop_order.py::test_no_sale[orders2] PASSED    [ 17%]
+BranchCoverageTest_coffee_shop_order.py::test_no_sale[orders3] PASSED    [ 20%]
+BranchCoverageTest_coffee_shop_order.py::test_sizes_membership_and_tax[False-small-3.0] PASSED [ 23%]
+BranchCoverageTest_coffee_shop_order.py::test_sizes_membership_and_tax[False-medium-4.5] PASSED [ 25%]
+BranchCoverageTest_coffee_shop_order.py::test_sizes_membership_and_tax[False-large-6.0] PASSED [ 28%]
+BranchCoverageTest_coffee_shop_order.py::test_sizes_membership_and_tax[True-small-3.0] PASSED [ 30%]
+BranchCoverageTest_coffee_shop_order.py::test_sizes_membership_and_tax[True-medium-4.5] PASSED [ 33%]
+BranchCoverageTest_coffee_shop_order.py::test_sizes_membership_and_tax[True-large-6.0] PASSED [ 35%]
+BranchCoverageTest_coffee_shop_order.py::test_defaults_for_size_modification_type_and_cost PASSED [ 38%]
+BranchCoverageTest_coffee_shop_order.py::test_syrup_cap[0-0] PASSED      [ 41%]
+BranchCoverageTest_coffee_shop_order.py::test_syrup_cap[1.49-1.49] PASSED [ 43%]
+BranchCoverageTest_coffee_shop_order.py::test_syrup_cap[1.5-1.5] PASSED  [ 46%]
+BranchCoverageTest_coffee_shop_order.py::test_syrup_cap[1.51-1.5] PASSED [ 48%]
+BranchCoverageTest_coffee_shop_order.py::test_syrup_cap[5-1.5] PASSED    [ 51%]
+BranchCoverageTest_coffee_shop_order.py::test_negative_cost_is_skipped_and_next_customization_runs PASSED [ 53%]
+BranchCoverageTest_coffee_shop_order.py::test_allergen_strict_cancels_item_and_stops_customizations[False-5.0-COMPLETED] PASSED [ 56%]
+BranchCoverageTest_coffee_shop_order.py::test_allergen_strict_cancels_item_and_stops_customizations[True-0.0-NO_SALE] PASSED [ 58%]
+BranchCoverageTest_coffee_shop_order.py::test_strict_allergy_cancels_only_its_own_order PASSED [ 61%]
+BranchCoverageTest_coffee_shop_order.py::test_audit_threshold_and_priority[4-False-NO_SALE] PASSED [ 64%]
+BranchCoverageTest_coffee_shop_order.py::test_audit_threshold_and_priority[5-False-AUDIT_REJECTED] PASSED [ 66%]
+BranchCoverageTest_coffee_shop_order.py::test_audit_threshold_and_priority[4-True-COMPLETED] PASSED [ 69%]
+BranchCoverageTest_coffee_shop_order.py::test_audit_threshold_and_priority[5-True-AUDIT_REJECTED] PASSED [ 71%]
+BranchCoverageTest_coffee_shop_order.py::test_customization_rejections_also_count_toward_audit[modification0] PASSED [ 74%]
+BranchCoverageTest_coffee_shop_order.py::test_customization_rejections_also_count_toward_audit[modification1] PASSED [ 76%]
+BranchCoverageTest_coffee_shop_order.py::test_mixed_batch_skips_unpaid_order_and_applies_tax_after_discount PASSED [ 79%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles0-NO_DATA] PASSED [ 82%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles1-OPTIMAL] PASSED [ 84%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles2-OPTIMAL] PASSED [ 87%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles3-OPTIMAL] PASSED [ 89%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles4-SHUTDOWN] PASSED [ 92%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles5-OPTIMAL] PASSED [ 94%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles6-OPTIMAL] PASSED [ 97%]
+BranchCoverageTest_coffee_shop_order.py::test_machine_branches_and_temperature_boundary[cycles7-SHUTDOWN] PASSED [100%]
+
+============================= 39 passed in 0.17s ==============================
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage report --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\.coverage -m
+Name                   Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------
+coffee_shop_order.py      54      0     38      0   100%
+------------------------------------------------------------------
+TOTAL                     54      0     38      0   100%
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage json --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\.coverage -o C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\coverage.json
+Wrote JSON report to C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\coverage.json
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage html --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\.coverage -d C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\html
+Wrote HTML report to C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\branch\html\index.html
+
+Line coverage: 54/54 statements
+Branch coverage: 38/38 branch outcomes

@@ -26,3 +26,12 @@ Static Code Analysis using Pylint, Bandit and Flake8 on `energy_system.py` (Ener
 - Reflection: [Lab-5/reflection.md](Lab-5/reflection.md)
 - Reports (before and after): [Lab-5/reports](Lab-5/reports/)
 - Results: Pylint 6.14 → 10.00/10, Bandit 1 issue → 0, Flake8 12 warnings → 0
+
+## Lab 6
+
+Code and Branch Coverage Analysis on the unchanged coffee shop application.
+
+- [Lab 6 files and instructions](Lab-6/README.md)
+- [Line coverage tests](Lab-6/CodeCoverageTest_coffee_shop_order.py): 100% statement coverage
+- [Branch coverage tests](Lab-6/BranchCoverageTest_coffee_shop_order.py): 100% statement and branch coverage
+- [Result screenshots and reports](Lab-6/reports/)
