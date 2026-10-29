@@ -1,0 +1,36 @@
+Coffee shop lab: line
+Working directory: C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage run --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\.coverage --source=coffee_shop_order -m pytest CodeCoverageTest_coffee_shop_order.py -v --color=no
+============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6
+configfile: pytest.ini
+collecting ... collected 8 items
+
+CodeCoverageTest_coffee_shop_order.py::test_invalid_orders PASSED        [ 12%]
+CodeCoverageTest_coffee_shop_order.py::test_sizes_skipped_orders_and_member_discount PASSED [ 25%]
+CodeCoverageTest_coffee_shop_order.py::test_customizations_and_strict_allergy PASSED [ 37%]
+CodeCoverageTest_coffee_shop_order.py::test_five_rejections_trigger_audit PASSED [ 50%]
+CodeCoverageTest_coffee_shop_order.py::test_empty_batch_has_no_sale PASSED [ 62%]
+CodeCoverageTest_coffee_shop_order.py::test_machine_without_data PASSED  [ 75%]
+CodeCoverageTest_coffee_shop_order.py::test_machine_recovers_from_one_hot_reading PASSED [ 87%]
+CodeCoverageTest_coffee_shop_order.py::test_machine_shuts_down_after_two_hot_readings PASSED [100%]
+
+============================== 8 passed in 0.11s ==============================
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage report --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\.coverage -m
+Name                   Stmts   Miss  Cover   Missing
+----------------------------------------------------
+coffee_shop_order.py      54      0   100%
+----------------------------------------------------
+TOTAL                     54      0   100%
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage json --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\.coverage -o C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\coverage.json
+Wrote JSON report to C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\coverage.json
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage html --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\.coverage -d C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\html
+Wrote HTML report to C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\line\html\index.html
+
+Line coverage: 54/54 statements

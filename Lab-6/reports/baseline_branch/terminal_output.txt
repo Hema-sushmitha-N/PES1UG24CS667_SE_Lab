@@ -1,0 +1,30 @@
+Coffee shop lab: baseline_branch
+Working directory: C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage run --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\.coverage --source=coffee_shop_order --branch -m pytest test_coffee_shop.py -v --color=no
+============================= test session starts =============================
+platform win32 -- Python 3.14.6, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6
+configfile: pytest.ini
+collecting ... collected 1 item
+
+test_coffee_shop.py::test_single_medium_coffee PASSED                    [100%]
+
+============================== 1 passed in 0.05s ==============================
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage report --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\.coverage -m
+Name                   Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------
+coffee_shop_order.py      54     28     38     10    43%   3, 10, 14, 17-21, 31-32, 35-38, 40, 45, 52, 54, 59-71
+------------------------------------------------------------------
+TOTAL                     54     28     38     10    43%
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage json --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\.coverage -o C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\coverage.json
+Wrote JSON report to C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\coverage.json
+
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\.venv\Scripts\python.exe -m coverage html --data-file=C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\.coverage -d C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\html
+Wrote HTML report to C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-6\reports\baseline_branch\html\index.html
+
+Line coverage: 26/54 statements
+Branch coverage: 14/38 branch outcomes
