@@ -98,7 +98,7 @@ ReportLab; it is not a dependency for running the lab application or tests.
 The handout does not prescribe return values for invalid inputs. These explicit
 policies make the functions safe while retaining valid coffee-shop calculations.
 
-## Explain during the lab
+## Explaination
 
 `@given` asks Hypothesis to generate values from strategies such as `st.text()`
 and `st.none()`. The three starter properties fail if an unexpected exception
