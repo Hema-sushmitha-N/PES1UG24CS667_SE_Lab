@@ -1,0 +1,11 @@
+{
+  "stage": "fixed_app",
+  "command": [
+    "C:\\Users\\sushm\\Desktop\\PES1UG24CS667_SE_Lab\\Lab-7\\.venv\\Scripts\\python.exe",
+    "processor.py"
+  ],
+  "returncode": 0,
+  "expected_returncode": 0,
+  "target": "fixed",
+  "stdin": "moc\n1.0,1.5,2.0\nmilk:oat;syrup:vanilla\n"
+}

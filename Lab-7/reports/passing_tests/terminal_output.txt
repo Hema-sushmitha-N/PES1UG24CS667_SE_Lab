@@ -1,0 +1,6 @@
+Lab 7 | passing_tests | HEMA SUSHMITHA N | PES1UG24CS667
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\.venv\Scripts\python.exe -m pytest test_processor.py -q --color=no --tb=short
+............................................                             [100%]
+44 passed in 2.31s
+
+Exit code: 0 (expected 0)

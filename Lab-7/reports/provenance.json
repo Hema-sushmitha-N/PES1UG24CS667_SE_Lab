@@ -1,0 +1,17 @@
+{
+  "source_repository": "https://github.com/SETAPESU26/L6_L7_03_coffee_shop_order",
+  "source_commit": "2df8501ea39f90dcb7e339510ddd36d02bffda78",
+  "original_sha256": {
+    "processor.py": "42c74e702712f0423962419ab95172dd3fd35baf2fd92c684fb1da4e9bd4004c",
+    "test_processor.py": "232d46c3ed86cc2c02933176896538fed97b1a62dd453c37b9ea6577dee6925a",
+    "README.md": "9b5381771d3a0d9fa4d033af01ffdc4c4334d7adb47d818dd7e3ca730bf326e5"
+  },
+  "completed_test_suite_sha256": "493fb99e5c29461bff462cad99077bb0e78f1a106b61b5d556c29a34efdd2c40",
+  "baseline": {
+    "failed": 34,
+    "passed": 10
+  },
+  "fixed": {
+    "passed": 44
+  }
+}

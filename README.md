@@ -36,3 +36,12 @@ Code and Branch Coverage Analysis on the unchanged coffee shop application.
 - [Line coverage tests](Lab-6/CodeCoverageTest_coffee_shop_order.py): 100% statement coverage
 - [Branch coverage tests](Lab-6/BranchCoverageTest_coffee_shop_order.py): 100% statement and branch coverage
 - [Result screenshots and reports](Lab-6/reports/)
+
+## Lab 7
+
+Fuzzing for Input Validation Bugs using Hypothesis on the coffee shop processor.
+
+- [Lab 7 instructions and results](Lab-7/README.md)
+- [PDF report with four required screenshots](Lab-7/Lab_7_Fuzz_Testing_Report.pdf)
+- [Fixed application](Lab-7/processor.py) and [completed tests](Lab-7/test_processor.py)
+- Results: original code 34 failed / 10 passed; fixed code **44 passed**

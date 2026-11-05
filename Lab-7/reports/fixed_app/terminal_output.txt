@@ -1,0 +1,13 @@
+Lab 7 | fixed_app | HEMA SUSHMITHA N | PES1UG24CS667
+Inputs (one per prompt): moc | 1.0,1.5,2.0 | milk:oat;syrup:vanilla
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\.venv\Scripts\python.exe processor.py
+==== Running lookup_drink_code ====
+Enter drink code prefix (e.g. LAT, CAP, ESP): Base Price: $ 5.0
+
+==== Running calculate_average_shot_cost ====
+Enter CSV of shot prices (e.g. 1.0, 1.5, 2.0): Average Shot Price: $ 1.5
+
+==== Running parse_order_modifiers ====
+Enter modifiers (e.g. milk:oat;syrup:vanilla): Parsed Modifiers: {'milk': 'oat', 'syrup': 'vanilla'}
+
+Exit code: 0 (expected 0)
