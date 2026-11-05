@@ -1,0 +1,16 @@
+Lab 7 | buggy_app | HEMA SUSHMITHA N | PES1UG24CS667
+Inputs (one per prompt): moc | 1.0,1.5,2.0 | milk:oat;syrup:vanilla
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\.venv\Scripts\python.exe originals/processor.py
+==== Running lookup_drink_code ====
+Enter drink code prefix (e.g. LAT, CAP, ESP): Traceback (most recent call last):
+  File "C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\originals\processor.py", line 41, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\originals\processor.py", line 27, in main
+    price = lookup_drink_code(drink_input)
+  File "C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\originals\processor.py", line 10, in lookup_drink_code
+    return menu_prices[code_prefix]
+           ~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'MOC'
+
+Exit code: 1 (expected 1)

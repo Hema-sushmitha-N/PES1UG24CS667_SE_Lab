@@ -1,0 +1,11 @@
+Lab 7 | failing_tests | HEMA SUSHMITHA N | PES1UG24CS667
+LAB7_TARGET=original (identical completed tests; buggy source)
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\.venv\Scripts\python.exe -m pytest test_processor.py -q --color=no -k "test_lookup_drink_code_no_crash or test_calculate_average_shot_cost_safe or test_parse_order_modifiers_safe" --tb=no
+FFF                                                                                          [100%]
+===================================== short test summary info =====================================
+FAILED test_processor.py::test_lookup_drink_code_no_crash - Failed: lookup_drink_code(None) raise...
+FAILED test_processor.py::test_calculate_average_shot_cost_safe - Failed: calculate_average_shot_...
+FAILED test_processor.py::test_parse_order_modifiers_safe - Failed: parse_order_modifiers(None) r...
+3 failed, 41 deselected in 1.67s
+
+Exit code: 1 (expected 1)

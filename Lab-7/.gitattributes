@@ -1,0 +1,4 @@
+*.pdf binary
+test_processor.py text eol=lf
+originals/** -text whitespace=cr-at-eol
+reports/**/*.txt -whitespace

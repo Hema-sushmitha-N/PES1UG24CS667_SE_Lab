@@ -1,0 +1,16 @@
+{
+  "stage": "failing_tests",
+  "command": [
+    "C:\\Users\\sushm\\Desktop\\PES1UG24CS667_SE_Lab\\Lab-7\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "test_processor.py",
+    "-q",
+    "--color=no",
+    "--tb=short"
+  ],
+  "returncode": 1,
+  "expected_returncode": 1,
+  "target": "original",
+  "stdin": null
+}

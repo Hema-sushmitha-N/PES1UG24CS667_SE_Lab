@@ -1,0 +1,366 @@
+Lab 7 | failing_tests | HEMA SUSHMITHA N | PES1UG24CS667
+LAB7_TARGET=original (identical completed tests; buggy source)
+> C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\.venv\Scripts\python.exe -m pytest test_processor.py -q --color=no --tb=short
+FFFFF..FFFFF...FFFFFFFFFFFF...FFFFFFF.FF.FFF                             [100%]
+================================== FAILURES ===================================
+_______________________ test_lookup_drink_code_no_crash _______________________
+test_processor.py:35: in test_lookup_drink_code_no_crash
+    result = lookup_drink_code(s)
+             ^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:2: in lookup_drink_code
+    code_prefix = code_string.upper()[:3]
+                  ^^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'upper'
+
+During handling of the above exception, another exception occurred:
+test_processor.py:33: in test_lookup_drink_code_no_crash
+    def test_lookup_drink_code_no_crash(s):
+                   ^^^
+test_processor.py:37: in test_lookup_drink_code_no_crash
+    pytest.fail(f"lookup_drink_code({s!r}) raised {type(error).__name__}: {error}")
+E   Failed: lookup_drink_code(None) raised AttributeError: 'NoneType' object has no attribute 'upper'
+E   Failing test case: test_lookup_drink_code_no_crash(
+E       s=None,
+E   )
+____________________ test_calculate_average_shot_cost_safe ____________________
+test_processor.py:44: in test_calculate_average_shot_cost_safe
+    result = calculate_average_shot_cost(s)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:13: in calculate_average_shot_cost
+    prices = [float(p) for p in pricing_csv.split(',')]
+                                ^^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+
+During handling of the above exception, another exception occurred:
+test_processor.py:42: in test_calculate_average_shot_cost_safe
+    def test_calculate_average_shot_cost_safe(s):
+                   ^^^
+test_processor.py:46: in test_calculate_average_shot_cost_safe
+    pytest.fail(f"calculate_average_shot_cost({s!r}) raised {type(error).__name__}: {error}")
+E   Failed: calculate_average_shot_cost(None) raised AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_calculate_average_shot_cost_safe(
+E       s=None,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\test_processor.py:45
+_______________________ test_parse_order_modifiers_safe _______________________
+test_processor.py:53: in test_parse_order_modifiers_safe
+    result = parse_order_modifiers(s)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:18: in parse_order_modifiers
+    items = order_spec.split(';')
+            ^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+
+During handling of the above exception, another exception occurred:
+test_processor.py:51: in test_parse_order_modifiers_safe
+    def test_parse_order_modifiers_safe(s):
+                   ^^^
+test_processor.py:55: in test_parse_order_modifiers_safe
+    pytest.fail(f"parse_order_modifiers({s!r}) raised {type(error).__name__}: {error}")
+E   Failed: parse_order_modifiers(None) raised AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_parse_order_modifiers_safe(
+E       s=None,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           C:\Users\sushm\Desktop\PES1UG24CS667_SE_Lab\Lab-7\test_processor.py:54
+_____________________ test_wrong_types_have_safe_results ______________________
+test_processor.py:61: in test_wrong_types_have_safe_results
+    st.booleans(), st.lists(st.integers(), max_size=5),
+    ^^^
+test_processor.py:64: in test_wrong_types_have_safe_results
+    assert lookup_drink_code(value) is None
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:2: in lookup_drink_code
+    code_prefix = code_string.upper()[:3]
+                  ^^^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'upper'
+E   Failing test case: test_wrong_types_have_safe_results(
+E       value=0,  # or any other generated value
+E   )
+___________ test_known_drink_prefixes_ignore_case_and_allow_suffix ____________
+test_processor.py:70: in test_known_drink_prefixes_ignore_case_and_allow_suffix
+    st.sampled_from([str.lower, str.upper, str.title]), st.text(max_size=15))
+            ^^^
+test_processor.py:73: in test_known_drink_prefixes_ignore_case_and_allow_suffix
+    assert lookup_drink_code(" \t" + case(code) + suffix + " \n") == price
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:10: in lookup_drink_code
+    return menu_prices[code_prefix]
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: ' \tL'
+E   Failing test case: test_known_drink_prefixes_ignore_case_and_allow_suffix(
+E       # The test always failed when commented parts were varied together.
+E       pair=('LAT', 4.5),  # or any other generated value
+E       case=<method 'lower' of 'str' objects>,  # or any other generated value
+E       suffix='',  # or any other generated value
+E   )
+_______________________ test_valid_modifiers_round_trip _______________________
+test_processor.py:96: in test_valid_modifiers_round_trip
+    def test_valid_modifiers_round_trip(modifiers):
+                   ^^^
+test_processor.py:98: in test_valid_modifiers_round_trip
+    assert parse_order_modifiers(text) == modifiers
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:20: in parse_order_modifiers
+    key, value = item.split(':')
+    ^^^^^^^^^^
+E   ValueError: not enough values to unpack (expected 2, got 1)
+E   Failing test case: test_valid_modifiers_round_trip(
+E       modifiers={},
+E   )
+______________________ test_drink_regressions[None-None] ______________________
+test_processor.py:106: in test_drink_regressions
+    assert lookup_drink_code(code) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:2: in lookup_drink_code
+    code_prefix = code_string.upper()[:3]
+                  ^^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'upper'
+________________________ test_drink_regressions[-None] ________________________
+test_processor.py:106: in test_drink_regressions
+    assert lookup_drink_code(code) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:10: in lookup_drink_code
+    return menu_prices[code_prefix]
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: ''
+____________________ test_drink_regressions[unknown-None] _____________________
+test_processor.py:106: in test_drink_regressions
+    assert lookup_drink_code(code) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:10: in lookup_drink_code
+    return menu_prices[code_prefix]
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'UNK'
+_____________________ test_drink_regressions[  lat  -4.5] _____________________
+test_processor.py:106: in test_drink_regressions
+    assert lookup_drink_code(code) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:10: in lookup_drink_code
+    return menu_prices[code_prefix]
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: '  L'
+_______________________ test_drink_regressions[moc-5.0] _______________________
+test_processor.py:106: in test_drink_regressions
+    assert lookup_drink_code(code) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:10: in lookup_drink_code
+    return menu_prices[code_prefix]
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'MOC'
+_____________________ test_average_regressions[None-None] _____________________
+test_processor.py:118: in test_average_regressions
+    actual = calculate_average_shot_cost(csv)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:13: in calculate_average_shot_cost
+    prices = [float(p) for p in pricing_csv.split(',')]
+                                ^^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+_______________________ test_average_regressions[-None] _______________________
+test_processor.py:118: in test_average_regressions
+    actual = calculate_average_shot_cost(csv)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:13: in calculate_average_shot_cost
+    prices = [float(p) for p in pricing_csv.split(',')]
+              ^^^^^^^^
+E   ValueError: could not convert string to float: ''
+_____________________ test_average_regressions[   -None] ______________________
+test_processor.py:118: in test_average_regressions
+    actual = calculate_average_shot_cost(csv)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:13: in calculate_average_shot_cost
+    prices = [float(p) for p in pricing_csv.split(',')]
+              ^^^^^^^^
+E   ValueError: could not convert string to float: '   '
+_____________________ test_average_regressions[1,,3-None] _____________________
+test_processor.py:118: in test_average_regressions
+    actual = calculate_average_shot_cost(csv)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:13: in calculate_average_shot_cost
+    prices = [float(p) for p in pricing_csv.split(',')]
+              ^^^^^^^^
+E   ValueError: could not convert string to float: ''
+______________________ test_average_regressions[,-None] _______________________
+test_processor.py:118: in test_average_regressions
+    actual = calculate_average_shot_cost(csv)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:13: in calculate_average_shot_cost
+    prices = [float(p) for p in pricing_csv.split(',')]
+              ^^^^^^^^
+E   ValueError: could not convert string to float: ''
+___________________ test_average_regressions[one,two-None] ____________________
+test_processor.py:118: in test_average_regressions
+    actual = calculate_average_shot_cost(csv)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:13: in calculate_average_shot_cost
+    prices = [float(p) for p in pricing_csv.split(',')]
+              ^^^^^^^^
+E   ValueError: could not convert string to float: 'one'
+_____________________ test_average_regressions[nan-None] ______________________
+test_processor.py:120: in test_average_regressions
+    assert actual is None
+E   assert nan is None
+_____________________ test_average_regressions[inf-None] ______________________
+test_processor.py:120: in test_average_regressions
+    assert actual is None
+E   assert inf is None
+_____________________ test_average_regressions[-inf-None] _____________________
+test_processor.py:120: in test_average_regressions
+    assert actual is None
+E   assert -inf is None
+____________________ test_average_regressions[1e309-None] _____________________
+test_processor.py:120: in test_average_regressions
+    assert actual is None
+E   assert inf is None
+_____________________ test_average_regressions[-1,2-None] _____________________
+test_processor.py:120: in test_average_regressions
+    assert actual is None
+E   assert 0.5 is None
+________________ test_average_regressions[1e308,1e308-1e+308] _________________
+test_processor.py:122: in test_average_regressions
+    assert actual == pytest.approx(expected)
+E   assert inf == 1e+308 ± 1.0e+302
+E     
+E     comparison failed
+E     Obtained: inf
+E     Expected: 1e+308 ± 1.0e+302
+_ test_average_regressions[1.7976931348623157e308,1.7976931348623157e308-1.7976931348623157e+308] _
+test_processor.py:122: in test_average_regressions
+    assert actual == pytest.approx(expected)
+E   assert inf == 1.79769313486...308 ± 1.8e+302
+E     
+E     comparison failed
+E     Obtained: inf
+E     Expected: 1.7976931348623157e+308 ± 1.8e+302
+__________________ test_modifier_regressions[None-expected0] __________________
+test_processor.py:133: in test_modifier_regressions
+    assert parse_order_modifiers(spec) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:18: in parse_order_modifiers
+    items = order_spec.split(';')
+            ^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+____________________ test_modifier_regressions[-expected1] ____________________
+test_processor.py:133: in test_modifier_regressions
+    assert parse_order_modifiers(spec) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:20: in parse_order_modifiers
+    key, value = item.split(':')
+    ^^^^^^^^^^
+E   ValueError: not enough values to unpack (expected 2, got 1)
+___________________ test_modifier_regressions[;-expected2] ____________________
+test_processor.py:133: in test_modifier_regressions
+    assert parse_order_modifiers(spec) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:20: in parse_order_modifiers
+    key, value = item.split(':')
+    ^^^^^^^^^^
+E   ValueError: not enough values to unpack (expected 2, got 1)
+__________________ test_modifier_regressions[milk-expected3] __________________
+test_processor.py:133: in test_modifier_regressions
+    assert parse_order_modifiers(spec) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:20: in parse_order_modifiers
+    key, value = item.split(':')
+    ^^^^^^^^^^
+E   ValueError: not enough values to unpack (expected 2, got 1)
+_______________ test_modifier_regressions[:oat;milk:-expected4] _______________
+test_processor.py:133: in test_modifier_regressions
+    assert parse_order_modifiers(spec) == expected
+E   AssertionError: assert {'': 'oat', 'milk': ''} == {}
+E     
+E     Left contains 2 more items:
+E     {'': 'oat', 'milk': ''}
+E     Use -v to get more diff
+___ test_modifier_regressions[ milk : oat ;bad; ;syrup:vanilla;-expected6] ____
+test_processor.py:133: in test_modifier_regressions
+    assert parse_order_modifiers(spec) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:20: in parse_order_modifiers
+    key, value = item.split(':')
+    ^^^^^^^^^^
+E   ValueError: not enough values to unpack (expected 2, got 1)
+_____________ test_modifier_regressions[note:extra:hot-expected7] _____________
+test_processor.py:133: in test_modifier_regressions
+    assert parse_order_modifiers(spec) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:20: in parse_order_modifiers
+    key, value = item.split(':')
+    ^^^^^^^^^^
+E   ValueError: too many values to unpack (expected 2, got 3)
+____________________________ test_cli_valid_input _____________________________
+test_processor.py:139: in test_cli_valid_input
+    processor.main()
+originals\processor.py:27: in main
+    price = lookup_drink_code(drink_input)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:10: in lookup_drink_code
+    return menu_prices[code_prefix]
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'MOC'
+---------------------------- Captured stdout call -----------------------------
+==== Running lookup_drink_code ====
+___________________________ test_cli_invalid_input ____________________________
+test_processor.py:147: in test_cli_invalid_input
+    processor.main()
+originals\processor.py:27: in main
+    price = lookup_drink_code(drink_input)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+originals\processor.py:10: in lookup_drink_code
+    return menu_prices[code_prefix]
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'UNK'
+---------------------------- Captured stdout call -----------------------------
+==== Running lookup_drink_code ====
+____________________________ test_cli_end_of_input ____________________________
+test_processor.py:158: in test_cli_end_of_input
+    processor.main()
+originals\processor.py:26: in main
+    drink_input = input("Enter drink code prefix (e.g. LAT, CAP, ESP): ")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_processor.py:156: in ended
+    raise EOFError
+E   EOFError
+---------------------------- Captured stdout call -----------------------------
+==== Running lookup_drink_code ====
+=========================== short test summary info ===========================
+FAILED test_processor.py::test_lookup_drink_code_no_crash - Failed: lookup_dr...
+FAILED test_processor.py::test_calculate_average_shot_cost_safe - Failed: cal...
+FAILED test_processor.py::test_parse_order_modifiers_safe - Failed: parse_ord...
+FAILED test_processor.py::test_wrong_types_have_safe_results - AttributeError...
+FAILED test_processor.py::test_known_drink_prefixes_ignore_case_and_allow_suffix
+FAILED test_processor.py::test_valid_modifiers_round_trip - ValueError: not e...
+FAILED test_processor.py::test_drink_regressions[None-None] - AttributeError:...
+FAILED test_processor.py::test_drink_regressions[-None] - KeyError: ''
+FAILED test_processor.py::test_drink_regressions[unknown-None] - KeyError: 'UNK'
+FAILED test_processor.py::test_drink_regressions[  lat  -4.5] - KeyError: '  L'
+FAILED test_processor.py::test_drink_regressions[moc-5.0] - KeyError: 'MOC'
+FAILED test_processor.py::test_average_regressions[None-None] - AttributeErro...
+FAILED test_processor.py::test_average_regressions[-None] - ValueError: could...
+FAILED test_processor.py::test_average_regressions[   -None] - ValueError: co...
+FAILED test_processor.py::test_average_regressions[1,,3-None] - ValueError: c...
+FAILED test_processor.py::test_average_regressions[,-None] - ValueError: coul...
+FAILED test_processor.py::test_average_regressions[one,two-None] - ValueError...
+FAILED test_processor.py::test_average_regressions[nan-None] - assert nan is ...
+FAILED test_processor.py::test_average_regressions[inf-None] - assert inf is ...
+FAILED test_processor.py::test_average_regressions[-inf-None] - assert -inf i...
+FAILED test_processor.py::test_average_regressions[1e309-None] - assert inf i...
+FAILED test_processor.py::test_average_regressions[-1,2-None] - assert 0.5 is...
+FAILED test_processor.py::test_average_regressions[1e308,1e308-1e+308] - asse...
+FAILED test_processor.py::test_average_regressions[1.7976931348623157e308,1.7976931348623157e308-1.7976931348623157e+308]
+FAILED test_processor.py::test_modifier_regressions[None-expected0] - Attribu...
+FAILED test_processor.py::test_modifier_regressions[-expected1] - ValueError:...
+FAILED test_processor.py::test_modifier_regressions[;-expected2] - ValueError...
+FAILED test_processor.py::test_modifier_regressions[milk-expected3] - ValueEr...
+FAILED test_processor.py::test_modifier_regressions[:oat;milk:-expected4] - A...
+FAILED test_processor.py::test_modifier_regressions[ milk : oat ;bad; ;syrup:vanilla;-expected6]
+FAILED test_processor.py::test_modifier_regressions[note:extra:hot-expected7]
+FAILED test_processor.py::test_cli_valid_input - KeyError: 'MOC'
+FAILED test_processor.py::test_cli_invalid_input - KeyError: 'UNK'
+FAILED test_processor.py::test_cli_end_of_input - EOFError
+34 failed, 10 passed in 3.79s
+
+Exit code: 1 (expected 1)
